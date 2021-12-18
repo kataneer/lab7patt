@@ -20,19 +20,19 @@ void metCyclons::init(float t)
 void metCyclons::cyclonsCount(int atm, float temp)
 {
 	printf("%f\n", atm * times / temp);
-	printf("\nСчетчик Inf.Expert: циклоны\n\n");
+	printf("\nРЎС‡РµС‚С‡РёРє Inf.Expert: С†РёРєР»РѕРЅС‹\n\n");
 }
 
 void metCyclons::atFieldCount(int atm, float temp)
 {
 	printf("%f\n", atm * powl(times, 2) / temp);
-	printf("\nСчетчик Inf.Expert: поля давления\n\n");
+	printf("\nРЎС‡РµС‚С‡РёРє Inf.Expert: РїРѕР»СЏ РґР°РІР»РµРЅРёСЏ\n\n");
 }
 
 void metCyclons::tempFieldCount(int atm, float temp)
 {
 	printf("%f\n", powl(atm, 2) * times / temp);
-	printf("\nСчетчик Inf.Expert: поля температуры\n\n");
+	printf("\nРЎС‡РµС‚С‡РёРє Inf.Expert: РїРѕР»СЏ С‚РµРјРїРµСЂР°С‚СѓСЂС‹\n\n");
 }
 
 
