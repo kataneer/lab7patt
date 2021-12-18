@@ -5,7 +5,7 @@
 
 using namespace std;
 
-Watch::Watch(float a, float b)  //Bridge: отделяем абстракцию Watch от реализаций Watcher и ProxyWatcher
+Watch::Watch(float a, float b)  //Bridge: РѕС‚РґРµР»СЏРµРј Р°Р±СЃС‚СЂР°РєС†РёСЋ Watch РѕС‚ СЂРµР°Р»РёР·Р°С†РёР№ Watcher Рё ProxyWatcher
 {
 	watchi = new Watcher(a, b);
 	proxywatchi = new ProxyWatcher(a, b);
