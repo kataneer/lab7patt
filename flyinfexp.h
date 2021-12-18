@@ -7,7 +7,7 @@
 using namespace std;
 
 
-class metCyclons {  //реализация Information Expert: отдельный класс metCyclons для расчетов
+class metCyclons {  //СЂРµР°Р»РёР·Р°С†РёСЏ Information Expert: РѕС‚РґРµР»СЊРЅС‹Р№ РєР»Р°СЃСЃ metCyclons РґР»СЏ СЂР°СЃС‡РµС‚РѕРІ
 public:
 	float times;
 	void init(float t);
@@ -46,7 +46,7 @@ public:
 	{
 		printf("%f\n", atm + 2 * temp);
 		printf("%f\n", atm + 2 / temp);
-		printf("\nСчетчик осадков\n\n");
+		printf("\nРЎС‡РµС‚С‡РёРє РѕСЃР°РґРєРѕРІ\n\n");
 	}
 };
 
@@ -55,7 +55,7 @@ public:
 	void meteoCount()
 	{
 		printf("%f\n", atm - temp);
-		printf("\nСчетчик снега\n\n");
+		printf("\nРЎС‡РµС‚С‡РёРє СЃРЅРµРіР°\n\n");
 	}
 };
 
@@ -65,11 +65,11 @@ public:
 	void meteoCount()
 	{
 		printf("%f\n", atm / temp);
-		printf("\nСчетчик льда\n\n");
+		printf("\nРЎС‡РµС‚С‡РёРє Р»СЊРґР°\n\n");
 	}
 };
 
-class flyweightFactory {  //реализация flyweight: создаем счетчики по необходимости
+class flyweightFactory {  //СЂРµР°Р»РёР·Р°С†РёСЏ flyweight: СЃРѕР·РґР°РµРј СЃС‡РµС‚С‡РёРєРё РїРѕ РЅРµРѕР±С…РѕРґРёРјРѕСЃС‚Рё
 private:
 	typedef std::map<int, metCounter*> counters;
 	counters avgRiv;
@@ -83,20 +83,20 @@ public:
 		if (strcmp(type, "snow") == 0)
 		{
 			count = new snowCounter;
-			printf("Создан новый счетчик снега.\n");
-			cout << "Участок: " << nameCount << ", номер: " << number << "\n" << endl;
+			printf("РЎРѕР·РґР°РЅ РЅРѕРІС‹Р№ СЃС‡РµС‚С‡РёРє СЃРЅРµРіР°.\n");
+			cout << "РЈС‡Р°СЃС‚РѕРє: " << nameCount << ", РЅРѕРјРµСЂ: " << number << "\n" << endl;
 		}
 		else if (strcmp(type, "ice") == 0)
 		{
 			count = new iceCounter;
-			printf("Создан новый счетчик льда.\n");
-			cout << "Участок: " << nameCount << ", номер: " << number << "\n" << endl;
+			printf("РЎРѕР·РґР°РЅ РЅРѕРІС‹Р№ СЃС‡РµС‚С‡РёРє Р»СЊРґР°.\n");
+			cout << "РЈС‡Р°СЃС‚РѕРє: " << nameCount << ", РЅРѕРјРµСЂ: " << number << "\n" << endl;
 		}
 		else if (strcmp(type, "weather") == 0)
 		{
 			count = new weatherCounter;
-			printf("Создан новый счетчик погоды.\n");
-			cout << "Участок: " << nameCount << ", номер: " << number << "\n" << endl;
+			printf("РЎРѕР·РґР°РЅ РЅРѕРІС‹Р№ СЃС‡РµС‚С‡РёРє РїРѕРіРѕРґС‹.\n");
+			cout << "РЈС‡Р°СЃС‚РѕРє: " << nameCount << ", РЅРѕРјРµСЂ: " << number << "\n" << endl;
 		}
 		avgRiv[pos] = count;
 	}
