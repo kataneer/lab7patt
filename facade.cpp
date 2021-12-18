@@ -5,7 +5,7 @@
 #include "iterator.h"
 #include <iostream>
 
-Facade::Facade()  //Facade: управляем разными интерфейсами через унифицированный
+Facade::Facade()  //Facade: СѓРїСЂР°РІР»СЏРµРј СЂР°Р·РЅС‹РјРё РёРЅС‚РµСЂС„РµР№СЃР°РјРё С‡РµСЂРµР· СѓРЅРёС„РёС†РёСЂРѕРІР°РЅРЅС‹Р№
 {
 	Waters *FacadeWater = new Waters();
 	aggregate <string> *FacadeAggr = new aggregate <string> ();
