@@ -11,6 +11,8 @@ Watch::Watch(float a, float b)  //Bridge: отделяем абстракцию 
 	proxywatchi = new ProxyWatcher(a, b);
 }
 
+//методы классов Watcher и ProxyWatcher
+
 void Watcher::graphFlow()
 {
 	printf("%f\n\n", square + speed);
