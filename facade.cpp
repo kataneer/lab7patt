@@ -4,6 +4,7 @@
 #include "iterator.cpp"
 #include "iterator.h"
 #include <iostream>
+//подключаем соответствующие классы для управления
 
 Facade::Facade()  //Facade: управляем разными интерфейсами через унифицированный
 {
