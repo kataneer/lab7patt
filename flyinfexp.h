@@ -7,7 +7,7 @@
 using namespace std;
 
 
-class metCyclons {  //реализация Information Expert: отдельный класс metCyclons для расчетов
+class metCyclons {  //реализация Information Expert: отдельный класс metCyclons для расчетов в классе metCounter
 public:
 	float times;
 	void init(float t);
@@ -16,6 +16,7 @@ public:
 	void tempFieldCount(int atm, float temp);
 };
 
+//счетчики - общий класс metCounter и его подклассы для льда, снега и погоды
 class metCounter {
 protected:
 	char *name = new char[];
