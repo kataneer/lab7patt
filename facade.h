@@ -1,18 +1,30 @@
-#ifndef __facade
-#define __facade
-
 #include "adapter.h"
 #include "iterator.h"
 
 using namespace std;
 
-class Facade {
+class Facade {     //реализация Facade: управляем разными интерфейсами через унифицированный
 public:
-	string S;
-	Waters *FacadeWater;
+	string S; 
+	Waters *FacadeWater;               //подключаем объекты разных классов
 	aggregate <string> *FacadeAggr;
-	Facade();
+	Facade()
+	{
+		Waters *FacadeWater = new Waters();
+		aggregate <string> *FacadeAggr = new aggregate <string>();
+	}
+	void waterLvl()
+	{
+		FacadeWater->waterLvl();
+	}
+	void underFlows()
+	{
+		FacadeWater->underFlows();
+	}
+	
+	void end()
+	{
+		FacadeAggr->end();
+	}
 };
-
-#endif
 
