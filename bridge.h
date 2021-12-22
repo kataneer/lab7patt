@@ -24,6 +24,10 @@ public:
 	Watcher *watchi;
 	ProxyWatcher *proxywatchi;
 	Watch(float a, float b);
+	void graphFlow();
+	void graphForecast();
+	void graphPFlow();
+	void graphPForecast();
 };
 
 
