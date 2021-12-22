@@ -29,7 +29,7 @@ void sideRiver:: flow()
 	}
 	void Waters::waterLvl()
 	{
-		printf("Успешно используем методы класса Waters через фасад\n\n");
+		printf("РЈСЃРїРµС€РЅРѕ РёСЃРїРѕР»СЊР·СѓРµРј РјРµС‚РѕРґС‹ РєР»Р°СЃСЃР° Waters С‡РµСЂРµР· С„Р°СЃР°Рґ\n");
 	}
 	void Lake::underFlows()
 	{
