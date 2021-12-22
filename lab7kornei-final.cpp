@@ -7,7 +7,6 @@
 #include "bridge.h"
 #include "bridge.cpp"
 #include "facade.h"
-#include "facade.cpp"
 #include "iterator.cpp"
 #include "iterator.h"
 #include "flyinfexp.h"
@@ -23,26 +22,28 @@ using namespace std;
 int _tmain(int argc, _TCHAR* argv[])
 {
 	setlocale(LC_ALL, "Russian");
+	metCounter *conto = new metCounter();
+	Watch *seeyo = new Watch(36, 116);
+	flyweightFactory *eski = new flyweightFactory();
 	printf("Bridge\n\n");
 //обращаемся через экземпляр класса Watch к методу graphFlow у класса Watcher и graphForecast класса ProxyWatcher для проверки связей
-	Watch *seeyo = new Watch(36, 116);
 	printf("С обычного наблюдателя, flow:\n\n");
-	seeyo->watchi->graphFlow();                 
+	seeyo->graphFlow();                 
 	printf("С как бы прокси-наблюдателя, forecast:\n\n");
-	seeyo->proxywatchi->graphForecast();
+	seeyo->graphPForecast();
 	printf("Flyweight\n\n");
-//создаем фабрику eski, через встроенный метод создания - множество объектов-счетчиков с разными параметрами и выводим информацию по ним
-       flyweightFactory *eski = new flyweightFactory();
+//создаем множество объектов-счетчиков с разными параметрами и выводим информацию по ним
 	eski->creati("Береговая", "snow", 1, 1, 123.4, 35);
 	eski->creati("Береговая", "snow", 2, 1, 125, 37);
 	eski->creati("Ленточный бор", "weather", 1, 1, 125, 37);
 	printf("Facade\n\n");
-//создаем новый экземпляр класса Facade и обращаемся через унифицированный интерфейс к методу waterLvl из связанного класса
+//создаем новый экземпляр класса Facade и обращаемся через унифицированный интерфейс к методам из связанных классов
 	Facade *k = new Facade();
-	k->FacadeWater->waterLvl();
+	k->waterLvl();
+	k->underFlows();
+	k->end();
 	printf("Information expert\n\n");
-//подсчитываем циклоны, поля давлений и температуры в отдельном классе metCyclons и его методах подсчета cyclonsCount, atFieldCount и tempFieldCount через экземпляр класса fieldWay
-	metCounter *conto = new metCounter();
+//подсчитываем циклоны, поля давлений и температуры в отдельном классе metCyclons и его методах подсчета
 	conto->init(35, 123.4);
 	conto->fieldWay->init(30.4);
 	conto->fieldWay->cyclonsCount(conto->atm, conto->temp);
