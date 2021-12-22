@@ -98,6 +98,7 @@ public:
 	};
 	myIterator end()
 	{
+		printf("И методы класса aggregate - тоже\n\n");
 		return myIterator(0);
 	};
 	void push(T const &t)
